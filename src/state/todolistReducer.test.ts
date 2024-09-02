@@ -1,4 +1,3 @@
-
 import { v1 } from 'uuid'
 import { TodolistType } from '../App'
 import {todolistReducer} from "./todolistReducer";
@@ -20,7 +19,7 @@ test('correct todolist should be removed', () => {
             id: todolistId1,
         },
     }
-    const endState = todolistReducer(startState, action)
+    const endState = todolistReducer(startState, {type: "REMOVE-TODOLIST", payload: {id: todolistId1}})
 
     // 3. Проверяем, что наши действия (изменения state) соответствуют ожиданию
     // в массиве останется один тудулист

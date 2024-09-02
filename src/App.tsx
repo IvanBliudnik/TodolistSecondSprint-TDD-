@@ -5,7 +5,6 @@ import {v1} from "uuid";
 import {AddItemForm} from "./AddItemForm";
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-// import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
@@ -117,14 +116,16 @@ function App() {
 		const newTodolists = todolists.map(tl => tl.id === todolistId ? {...tl, title} : tl)
 		setTodolists(newTodolists)
 	}
+
 	const theme = createTheme({
 		palette: {
 			mode: themeMode === 'light' ? 'light' : 'dark',
 			primary: {
-				main: '#087EA4',
+				main: '#91e1ce',
 			},
 		},
 	})
+
 	const changeModeHandler = () => {
 		setThemeMode(themeMode == 'light' ? 'dark' : 'light')
 	}
